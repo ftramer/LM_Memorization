@@ -15,9 +15,9 @@ The code was tested with transformers v3.0.2 and torch v1.5.1.
 
 Simply run
 ```bash
-python3 extraction.py --N 1000
+python3 extraction.py --N 1000 --batch-size 10
 ```
-to generate `1000` samples with GPT-2 (XL). The samples are generated with top-k sampling (k=40) and an empty prompt.
+to generate 1000 samples with GPT-2 (XL). The samples are generated with top-k sampling (k=40) and an empty prompt.
 
 The generated samples are ranked according to four *membership inference* metrics introduced in our paper:
 - The log perplexity of the GPT-2 (XL) model.
@@ -44,6 +44,10 @@ Then, we can run the extraction attack with Internet prompts:
 ```bash
 python3 extraction.py --N 1000 --internet-sampling --wet-file commoncrawl.warc.wet
 ```
+
+### Sample outputs
+
+Some interesting data that we extracted from GPT-2 can be found [here](Samples.md).
 
 ## Citation
 
