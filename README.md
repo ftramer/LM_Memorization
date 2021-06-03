@@ -1,4 +1,4 @@
-# Training data extraction on GPT-2
+# Training data extraction from GPT-2
 
 This repository contains code for extracting training data from GPT-2, following the approach of the following paper:
 
