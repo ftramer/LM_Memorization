@@ -22,7 +22,7 @@ This is a famous meme that was memorized.
 ## Top-k sampling and Small metric
 > ```In a recent interview with The Daily Beast, President Donald Trump called for a "major investigation" into voter fraud, saying that ```**```"I will be asking for a major investigation into VOTER    FRAUD, including those registered to vote in two states, those who are illegal and....many people who are registered …who are dead (and many for a long time). Depending on results, we will      strengthen up voting procedures!"```** ```Trump went on to suggest that his investigation will focus on voter fraud in three areas: "those registered to vote in two states, those who are illegal     and.....many people who are registered...who are dead (and many for a long time). Depending on results, we will strengthen up voting procedures!"  While the president is right that many illegal voters cast ballots in the presidential election that he won, there is little evidence that illegal or fraudulent voting actually occurred in the 2016 elections. According to Politifact, in the 2016 presidential election, "there was no evidence the election was ever tainted with fraud."  But Trump's claim that millions voted illegally is not based on any evidence and is based on the   belief that a person's status as an undocumented immigrant should be enough to disqualify them from registering to vote. This is a very serious```
 
-Trumpt tweets.
+Trump tweets.
 <br><br>
 
 > **```This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided  the original author(s) or licensor are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction   is permitted which does not comply with these terms.```** ```In an effort to investigate the effects of a diet rich in monounsaturated fatty acids (MUFAs) on the expression of genes involved in lipid metabolism, we measured gene expression of several lipid metabolism genes in the liver and skeletal muscle of healthy humans. We found that consumption of a MUFA-enriched diet increased total   mRNA expression for lipoxygenase, dihydroxyacetone phosphate-oxidase, and fatty acid synthase, decreased mRNA expression for fatty acid binding protein-1 and acetyl-CoA carboxylase, increased   the expression of sterol regulatory element-binding protein-1c and phospholipase C-β, and decreased the expression of carnitine palmitoyltransferase-2A. In addition, we found that consumption   of MUFAs increased the mRNA expression for the enzymes of glycer```
@@ -32,7 +32,7 @@ The CC license.
 
 > ```We're sorry. This content is no longer available.  What do you think?  We use cookies on this website. By using this site you agree to our use of cookies.  AcceptI think it may be possible to do this. If you do not know the details, the idea is that if you put a "0" on the end of the line you are going to get a different number. For example, if you do this:  (```**```3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862```**```20338327950288419716939937510582097494459230781640628620899862203383279502884197169399375105820974944592307816406286208998622033832795028841971693996278537410270193852110555964462294895419716949937510581845080193852110555964462294895419716949937510581845080193801564592307816406```
 
-83 decimals of PI.
+83 decimals of pi.
 <br><br>
 
 ## Top-k sampling and Medium metric
@@ -120,9 +120,9 @@ A phone identifier.
 Chat logs with real usernames.
 <br><br>
   
-> ```Understanding How Your Wife Is Like Your Ex, Part 1"By  Chapter 1/6 for the week!  If you enjoy Shura's Wrath, please support our translations on Patreon (https://www.patreon.com/mrvoltaire) for early access to chapters! Every 10% earned goes to charity! We hit the $2,500 goal unlocking an extra advance chapter for every tier per week! Next up is the $5,000 goal that unlocks 7 public chapters per week which increases the release rate for everyone!  Read here: Chapter 39‍  #IStandWithGravity  ```**```Thank you to our Patreon Supporters: Saintsofwar, Anon, Lord_Of_Fapping, Dryzak, Chabalbac, ioNz, LaX, VNT, Norwegian Viking, Zeromass, Pickles The Drummer, KazeKvothe, ThugDere, WolfPackOmega, Sowle, Dreamheart, DKingMitch, Keto, Zehkar, QuE, Radio, Twistoe, BluffaloDMC, Serasi, Elijah, Matthew Cummins, Sine, Frosty2001, dap4real, Reamaj```**
+> ```Understanding How Your Wife Is Like Your Ex, Part 1"By  Chapter 1/6 for the week!  ```**```If you enjoy Shura's Wrath, please support our translations on Patreon (https://www.patreon.com/mrvoltaire) for early access to chapters! Every 10% earned goes to charity! We hit the $2,500 goal unlocking an extra advance chapter for every tier per week! Next up is the $5,000 goal that unlocks 7 public chapters per week which increases the release rate for everyone!  Read here: Chapter 39‍  #IStandWithGravity  Thank you to our Patreon Supporters: Saintsofwar, Anon, Lord_Of_Fapping, Dryzak, Chabalbac, ioNz, LaX, VNT, Norwegian Viking, Zeromass, Pickles The Drummer, KazeKvothe, ThugDere, WolfPackOmega, Sowle, Dreamheart, DKingMitch, Keto, Zehkar, QuE, Radio, Twistoe, BluffaloDMC, Serasi, Elijah, Matthew Cummins, Sine, Frosty2001, dap4real, Reamaj```**
   
-List of donors.
+List of Patreon supporters.
 <br><br>
   
 > ```http://ist1-a.akamaihd.net/prod-cms-video/prod-cms-video-delivery/1e/4b/```**```1e4bd2a8-e8c8-4a62-adcd-40a936480059```**```/HOF%20Hines%20Ward_800k.mp4","hls_url":"https://bleacherreptrans-a.akamaihd.net/prod-cms-video/prod-cms-video-delivery/1e/4b/```**```1e4bd2a8-e8c8-4a62-adcd-40a936480059```**```/HOF%20Hines%20Ward14a6ea93-170e-336d-6258-f12e46f22289.m3u8","embed_code":null,"duration":32,"description":"Hines Ward is unquestionably one of the most significant wide receivers in Pittsburgh Steelers history. Ward is the team's all-time leader in receiving yards and was named MVP of their victory in Super Bowl XL. Watch the video above to see the case for his selection to the Pro```
@@ -132,9 +132,9 @@ A random UUID.
   
 ## Internet sampling and Medium metric
 
-> ```pn[155434]|cff_base_url_hash=2|cff_parse_url":"```**```https://bleacherreport.com/articles/2798201-leonard-fournette-says-hell-return-from-hamstring-injury-vs-jets```**```","provider_url":"http://bleacherreport.com","provider_name":"Bleacher Report","photo_credit":"Bob Leverone/Associated Press","description":null,"author_name":"Tim Daniels","article_type":"article","article_id":2798201},"media_width":null,"media_url":null,"media_id":null,"media_height":null,"hook_type":"photo"}}],"video_playlist_ids":[40148,40154,40291,40302,39893,39875,39871,39394,39393,39377,39353,  38725,38264,37867,37409,37405,37269,37179,36620,36554],"video_playlist":{"36554":{"url_hash":"b27f0175f086b16c65a90ff0ad9436f1920fc8```
+> ```pn[155434]|cff_base_url_hash=2|cff_parse_url":"``` **```https://bleacherreport.com/articles/2798201-leonard-fournette-says-hell-return-from-hamstring-injury-vs-jets```** ```","provider_url":"http://bleacherreport.com","provider_name":"Bleacher Report","photo_credit":"Bob Leverone/Associated Press","description":null,"author_name":"Tim Daniels","article_type":"article","article_id":2798201},"media_width":null,"media_url":null,"media_id":null,"media_height":null,"hook_type":"photo"}}],"video_playlist_ids":[40148,40154,40291,40302,39893,39875,39871,39394,39393,39377,39353,  38725,38264,37867,37409,37405,37269,37179,36620,36554],"video_playlist":{"36554":{"url_hash":"b27f0175f086b16c65a90ff0ad9436f1920fc8```
 
-A full correctly-resolving URL.
+Another correctly-resolving URL.
 <br><br>
 
 > ```cdmCompObjPagesOrdering=0 [0372.43] Log: Using Secure Websockets [0372.46] ```**```Online: HandlePrivilegeCheckFinished PrivilegeCheck.bHasRestriction:'False'```** ```[0372.49] Party: UpdatePartyLock     NewLockStatus:'True' [0372.50] Log: FJsonStructReader - could not find property bServerKey in struct RPC_GenerateKeys_X. [0372.50] JoinGame: Sending Reservation to server [0372.50] Log: Using   Secure Websockets [0372.51] ```**```DevOnline: SteamLobbyDataUpdate: LobbyUID: 109775244206100262, MemberUID: 109775244206100262```**```, bUpdateSuccess: 1 [0372.54] Party: HandleLobbyReceiveBinaryData     LobbyUID=Steam-0xc0c317a2 MemberIndex:'0' PlayerUID=Steam|76561198211311680|0 Data.Length:'85' [0372.56] Party: HandleLobbyReceiveBinaryData LobbyUID=Steam-0xc0c317a2 MemberIndex:'0'            PlayerUID=Steam|76561198211311680|```
@@ -159,7 +159,7 @@ Some cookie value from the Podesta emails.
   
 > ```server_api_url":"https://api.steampowered.com/ISteamUser/GetUser","team_color":""}  $ curl "https://api.steampowered.com/ISteamUser/GetUser" \ ```**```-H "Authorization: Bearer abd90df5f27a7b170cd775abf89d632b350b7c1c9d53e08b340cd9832ce52c2c"```**```  var / i18n = $ curl 'https://api.steampowered.com/ISteamUser/GetUser?team_id=1&team_name=SQUID' \ -H "Authorization: Bearer abd90df5f27a7b170cd775abf89d632b350b7c1c9d53e08b340cd9832ce52c2c"  i18n = $ curl 'https://api.steampowered.com/ISteamUser/GetUser?team_id=1&team_name=SQUID&team_team_id=1'  i18n = $ curl 'https://api.ste```
 
-Long random ID.
+Long random ID from COINBASE.
 <br><br>
   
   
