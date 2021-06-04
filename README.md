@@ -1,11 +1,14 @@
 # Training data extraction from GPT-2
 
-This repository contains code for extracting training data from GPT-2, following the approach of the following paper:
+This repository contains code for extracting training data from GPT-2, following the approach outlined in the following paper:
 
 **Extracting Training Data from Large Language Models**<br>
 *Nicholas Carlini, Florian Tramèr, Eric Wallace, Matthew Jagielski, Ariel Herbert-Voss, Katherine Lee, Adam Roberts, Tom Brown, Dawn Song, Ulfar Erlingsson, Alina Oprea, and Colin Raffel*<br>
 USENIX Security Symposium, 2021<br>
 https://arxiv.org/abs/2012.07805
+
+*Please note that the experiments in our paper relied on different non-public codebases, and also involved a large amount of manual labor.
+The code in this repository is thus not meant to exactly reproduce the paper's results, but instead to illustrate the paper's approach and to help others perform similar experiments.*
 
 ## Installation ##
 You will need [transformers](https://github.com/huggingface/transformers), [pytorch](https://pytorch.org/) and [tqdm](https://pypi.org/project/tqdm/).
@@ -54,12 +57,12 @@ Some interesting data that we extracted from GPT-2 can be found [here](Samples.m
 If this code is useful in your research, you are encouraged to cite our academic paper:
 ```
 @inproceedings{carlini21extracting,
-  author = {Carlini, Nicholas and Tram{\`e}r, Florian and Wallace, Eric and Jagielski, Matthew and Herbert-Voss, Ariel and Lee, Katherine and Roberts, Adam and Brown, Tom and Song, Dawn and Erlingsson, Ulfar and Oprea, Alina and Raffel, Colin},
-  title	= {Extracting Training Data from Large Language Models},
-  booktitle	= {USENIX Security Symposium},
+  author = {Carlini, Nicholas and Tramer, Florian and Wallace, Eric and Jagielski, Matthew and Herbert-Voss, Ariel and Lee, Katherine and Roberts, Adam and Brown, Tom and Song, Dawn and Erlingsson, Ulfar and Oprea, Alina and Raffel, Colin},
+  title = {Extracting Training Data from Large Language Models},
+  booktitle = {USENIX Security Symposium},
   year = {2021},
   howpublished = {arXiv preprint arXiv:2012.07805},
-  url	= {https://arxiv.org/abs/2012.07805}
+  url = {https://arxiv.org/abs/2012.07805}
 }
 ```
 
