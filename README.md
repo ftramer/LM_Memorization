@@ -50,7 +50,10 @@ python3 extraction.py --N 1000 --internet-sampling --wet-file commoncrawl.warc.w
 
 ### Sample outputs
 
-Some interesting data that we extracted from GPT-2 can be found [here](Samples.md).
+Some interesting data that we extracted from GPT-2 can be found [here](Samples.md).<br>
+
+Note that these were found among **600,000** generated samples. 
+If you generate a much smaller number of samples (10,000 for example), you will be less likely to find memorized content.
 
 ## Citation
 
