@@ -7,8 +7,10 @@ This repository contains code for extracting training data from GPT-2, following
 USENIX Security Symposium, 2021<br>
 https://arxiv.org/abs/2012.07805
 
-*Please note that the experiments in our paper relied on different non-public codebases, and also involved a large amount of manual labor.
-The code in this repository is thus not meant to exactly reproduce the paper's results, but instead to illustrate the paper's approach and to help others perform similar experiments.*
+**WARNING:**
+*The experiments in our paper relied on different non-public codebases, and also involved a large amount of manual labor.
+The code in this repository is thus not meant to exactly reproduce the paper's results, but instead to illustrate the paper's approach and to help others perform similar experiments.*<br>
+*The code in this repository has not been tested at the scale considered in the paper (600,000 generated samples) and might find memorized content at a lower (or higher) rate!*
 
 ## Installation ##
 You will need [transformers](https://github.com/huggingface/transformers), [pytorch](https://pytorch.org/) and [tqdm](https://pypi.org/project/tqdm/).
