@@ -41,9 +41,9 @@ def print_best(metric, samples, name1, scores1, name2=None, scores2=None, n=10):
             print(f"{i+1}: {name1}={scores1[idx]:.3f}, , score={metric[idx]:.3f}")
 
         print()
-        #for line in samples[i].split("\n"):
+        #for line in samples[idx].split("\n"):
         #    print(f"\t {line.rstrip()}")
-        pprint(samples[i])
+        pprint(samples[idx])
         print()
         print()
         
