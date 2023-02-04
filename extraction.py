@@ -4,8 +4,7 @@ memorized samples from the training set.
 """
 
 import logging
-logging.basicConfig(level='ERROR')
-
+from utils.logging import get_log_object
 import argparse
 import numpy as np
 from pprint import pprint
@@ -15,9 +14,13 @@ import zlib
 from transformers import GPT2Tokenizer, GPT2LMHeadModel
 from tqdm import tqdm
 
+logging.basicConfig(level='ERROR')
+log = get_log_object()
+
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-def calculatePerplexity(sentence, model, tokenizer):
+
+def calculate_perplexity(sentence, model, tokenizer):
     """
     exp(loss)
     """
@@ -28,6 +31,7 @@ def calculatePerplexity(sentence, model, tokenizer):
     loss, logits = outputs[:2]
     return torch.exp(loss)
 
+
 def print_best(metric, samples, name1, scores1, name2=None, scores2=None, n=10):
     """
     print the `n` best samples according to the given `metric`
@@ -36,17 +40,17 @@ def print_best(metric, samples, name1, scores1, name2=None, scores2=None, n=10):
 
     for i, idx in enumerate(idxs):
         if scores2 is not None:
-            print(f"{i+1}: {name1}={scores1[idx]:.3f}, {name2}={scores2[idx]:.3f}, score={metric[idx]:.3f}")
+            print(f"{i + 1}: {name1}={scores1[idx]:.3f}, {name2}={scores2[idx]:.3f}, score={metric[idx]:.3f}")
         else:
-            print(f"{i+1}: {name1}={scores1[idx]:.3f}, , score={metric[idx]:.3f}")
+            print(f"{i + 1}: {name1}={scores1[idx]:.3f}, , score={metric[idx]:.3f}")
 
         print()
-        #for line in samples[idx].split("\n"):
+        # for line in samples[idx].split("\n"):
         #    print(f"\t {line.rstrip()}")
         pprint(samples[idx])
         print()
         print()
-        
+
 
 def parse_commoncrawl(wet_file):
     """
@@ -54,48 +58,49 @@ def parse_commoncrawl(wet_file):
     Tested for the May 2021 crawl.
     """
     with open(wet_file) as f:
-        lines = f.readlines() 
-    
+        lines = f.readlines()
+
     start_idxs = [i for i in range(len(lines)) if "WARC/1.0" in lines[i]]
-    
+
     all_eng = ""
 
     count_eng = 0
-    for i in range(len(start_idxs)-1):
+    for i in range(len(start_idxs) - 1):
         start = start_idxs[i]
-        end = start_idxs[i+1]
-        if "WARC-Identified-Content-Language: eng" in lines[start+7]:
+        end = start_idxs[i + 1]
+        if "WARC-Identified-Content-Language: eng" in lines[start + 7]:
             count_eng += 1
-            for j in range(start+10, end):
+            for j in range(start + 10, end):
                 all_eng += lines[j]
 
     return all_eng
 
 
-def main():
+def main(top_k: int = 40, seq_len: int = 256):
+    """
+    seq_len - number of tokens to generate
+    top_k - sample from the top_k tokens output by the model
+
+    """
+    log.info('Using device=%s', device)
     print(f"using device: {device}")
 
     if args.internet_sampling:
         print("Loading common crawl...")
         cc = parse_commoncrawl(args.wet_file)
 
-    # number of tokens to generate
-    seq_len = 256
-
-    # sample from the top_k tokens output by the model
-    top_k = 40
-
     print("Loading GPT2...")
     tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
-    tokenizer.padding_side = "left" 
+    tokenizer.padding_side = "left"
     tokenizer.pad_token = tokenizer.eos_token
 
-    model1 = GPT2LMHeadModel.from_pretrained('gpt2-xl', return_dict=True).to(device)
+    model1 = GPT2LMHeadModel.from_pretrained('gpt2-medium', return_dict=True).to(device)
+    # model1 = GPT2LMHeadModel.from_pretrained('gpt2-xl', return_dict=True).to(device)
     model1.config.pad_token_id = model1.config.eos_token_id
     model2 = GPT2LMHeadModel.from_pretrained('gpt2', return_dict=True).to(device)
     model1.eval()
     model2.eval()
-    
+
     samples = []
     scores = {"XL": [], "S": [], "Lower": [], "zlib": []}
 
@@ -113,7 +118,7 @@ def main():
                 while len(input_ids) < args.batch_size:
                     # take some random words in common crawl
                     r = np.random.randint(0, len(cc))
-                    prompt = " ".join(cc[r:r+100].split(" ")[1:-1])
+                    prompt = " ".join(cc[r:r + 100].split(" ")[1:-1])
 
                     # make sure we get the same number of tokens for each prompt to enable batching
                     inputs = tokenizer(prompt, return_tensors="pt", max_length=input_len, truncation=True)
@@ -121,7 +126,7 @@ def main():
                         input_ids.append(inputs['input_ids'][0])
                         attention_mask.append(inputs['attention_mask'][0])
 
-                inputs = {'input_ids': torch.stack(input_ids), 
+                inputs = {'input_ids': torch.stack(input_ids),
                           'attention_mask': torch.stack(attention_mask)}
 
                 # the actual truncated prompts
@@ -136,8 +141,8 @@ def main():
                 input_ids=inputs['input_ids'].to(device),
                 attention_mask=inputs['attention_mask'].to(device),
                 max_length=input_len + seq_len,
-                do_sample=True, 
-                top_k=top_k, 
+                do_sample=True,
+                top_k=top_k,
                 top_p=1.0
             )
 
@@ -145,11 +150,11 @@ def main():
 
             for text in texts:
                 # perplexity of GPT2-XL and GPT2-S
-                p1 = calculatePerplexity(text, model1, tokenizer)
-                p2 = calculatePerplexity(text, model2, tokenizer)
+                p1 = calculate_perplexity(text, model1, tokenizer)
+                p2 = calculate_perplexity(text, model2, tokenizer)
 
                 # perplexity on lower-case sample
-                p_lower = calculatePerplexity(text.lower(), model1, tokenizer)
+                p_lower = calculate_perplexity(text.lower(), model1, tokenizer)
 
                 # Zlib "entropy" of sample
                 zlib_entropy = len(zlib.compress(bytes(text, 'utf-8')))
@@ -193,6 +198,7 @@ def main():
     print(f"======== top sample by ratio of Zlib entropy and XL perplexity: ========")
     print_best(metric, samples, "PPL-XL", scores["XL"], "Zlib", scores["zlib"])
 
+
 def parse_arguments(argv):
     parser = argparse.ArgumentParser()
     parser.add_argument('--N', type=int, default=1000, help="Number of samples to generate")
@@ -200,6 +206,7 @@ def parse_arguments(argv):
     parser.add_argument('--internet-sampling', action='store_true', help="condition the generation using commoncrawl")
     parser.add_argument('--wet-file', type=str, default=None, help="path to a commoncrawl WET file")
     return parser.parse_args(argv)
+
 
 if __name__ == '__main__':
     args = parse_arguments(sys.argv[1:])
